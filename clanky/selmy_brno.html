@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <style>
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: 5%;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scriptum-Clanky - Vítězná sezóna Šelem Brno</title>
+  </head>
+  <body>
+    <h2>
+      <u>Vítězná sezóna Šelem Brno</u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../Clanky.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsala: Ela Štercová</p>
+    <p class="autor">Datum: 5.5.2026</p>
+    <p class="zprava">
+      Sezóna 2025/2026 se zapíše do historie českého volejbalu jako sezóna, ve
+      které tým Šelmy Brno dosáhl dalšího mimořádného úspěchu. Už na začátku
+      základní části bylo patrné, že Šelmy patří mezi nejkvalitnější týmy ligy.
+      Předváděly kvalitní výkony, vyhrávaly důležitá utkání, působily sebevědomě
+      a hlavně velmi sehraně. Jejich hra byla postavena převážně na spolupráci
+      celého týmu, což se ukázalo jako klíčový faktor úspěchu. Vrchol sezóny
+      však přišel až ve finálové sérii proti Liberci. Ta se zpočátku nevyvíjela
+      pro Šelmy příznivě. První dva finálové zápasy prohrály a ocitly se na
+      pokraji prohry. Přes všechen stres a obavy se jim podařilo udělat
+      neuvěřitelný obrat a ve dvou následujících zápasech zvítězily. Celou sérii
+      tak otočily ve svůj prospěch a to na 2:2. Nejzáživnější zápas finále byl
+      bezpochyby ten poslední, který se pro Šelmy odehrál na domácí půdě a to ve
+      Winnig Group Areně Rondo. Po obratu z 0:2 na 2:2 bylo jasné, že rozhodne o
+      tom, kdo dostane titul. Brněnský tým zvládl utkání lépe, vyhrál 3:1 a tím
+      získal mistrovský titul. Tím, že minulý rok se jim podařilo získat stejný
+      titul byl tento ještě cennější, protože dosáhly tzv. “doublu”, který je ve
+      volejbalu velmi významný. Velkou roli ve vítězství sehrála také podpora
+      fanoušků. Finálové utkání v brněnské hale sledovalo více než 4500 diváků,
+      což znamenalo rekordní návštěvu ženské extraligy. Atmosféra byla bouřlivá
+      a hráčkám dodávala energii a sebevědomí. Šelmy Brno tak obhájily
+      mistrovský titul, ukázaly svou dominanci a potvrdily, že stále patří na
+      vrchol českého volejbalu.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_zpravy/selmy_1.png"
+        alt="obrázek Šelem Brno"
+      />
+    </div>
+    <p>
+      Zdroje: https://www.idnes.cz/sport/ostatni/selmy-brno-liberec-finale-
+      volejbal-extralig
+      https://sport.ceskatelevize.cz/clanek/volejbal/volejbalistky-kp-brno-porazily-
+      v-prvnim-finale-extraligy-selmy-v-tie-breaku-19149 oficiální instagram:
+      @vkbrno
+    </p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

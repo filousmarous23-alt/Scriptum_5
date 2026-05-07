@@ -1,0 +1,75 @@
+.rozhovory_fotky img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  transform: 0.3s ease;
+}
+.rozhovory_fotky img:hover {
+  scale: 1.05;
+}
+.rozhovory_fotky {
+  width: 30%;
+  min-width: 300px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.galerie_rozhovory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#menuTlacitko {
+  margin-top: 10px;
+  background-color: burlywood;
+  border: none;
+  padding: 10px 20px;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transform: 0.3s ease;
+}
+#menuTlacitko:hover {
+  scale: 1.1;
+}
+.skryto {
+  display: none;
+}
+.zobrazeno {
+  display: block;
+}
+#menuObsah.zobrazeno {
+  display: block;
+  position: absolute;
+  background-color: burlywood;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 100;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+#menuObsah p {
+  margin-left: -5px;
+  margin: 0;
+  background-color: none;
+  padding: 5px 0;
+  font-size: 30px;
+}
+#menuObsah a {
+  text-decoration: none;
+  color: black;
+}
+.domovní_stránka:hover {
+  scale: 1.1;
+}
+p.fejetony:hover {
+  scale: 1.1;
+}
+p.rozhovory:hover {
+  scale: 1.1;
+}

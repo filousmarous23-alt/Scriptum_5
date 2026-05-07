@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <link rel="stylesheet" href="profilovky.css" />
+    <style>
+      img {
+        width: 400px;
+        border-radius: 50%;
+      }
+      p.fejetony {
+        margin-top: 10px;
+        margin-left: 100px;
+        font-size: 35px;
+        cursor: pointer;
+        transform: 0.3s ease;
+      }
+      p.fejetony:hover {
+        scale: 1.1;
+      }
+      p.rozhovory {
+        margin-left: 100px;
+        font-size: 35px;
+        cursor: pointer;
+        transform: 0.3s ease;
+      }
+      p.rozhovory:hover {
+        scale: 1.1;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 85px;
+        text-align: center;
+      }
+      p.o_nás {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scriptum-Domovní stránka</title>
+  </head>
+  <body>
+    <h1>
+      <span style="background-color: burlywood"><u>SCRIPTUM!</u></span>
+    </h1>
+    <div class="menu-sekce">
+      <button id="menuTlacitko">☰</button>
+      <div id="menuObsah" class="skryto">
+        <p class="fejetony">
+          <a href="aktualni_zpravy.html">Aktuální zprávy</a>
+        </p>
+        <p class="rozhovory">
+          <a href="Rozhovory.html">Rozhovory</a>
+        </p>
+        <p class="fejetony">
+          <a href="Fejetony.html">Fejetony</a>
+        </p>
+        <p class="fejetony">
+          <a href="Clanky.html">Články</a>
+        </p>
+        <p class="fejetony">
+          <a href="Reportaze.html">Reportáže</a>
+        </p>
+        <p class="fejetony">
+          <a href="Komentare.html">Komentáře</a>
+        </p>
+      </div>
+    </div>
+    <p class="o_nás">
+      Vážení čtenáři, tento školní rok je pro nás všechny velice speciální, už
+      nejsme těmi nováčky co se musí na škole otrkat, ale zdatnými a vzornými
+      žáky, zatím ještě bez velkých povinností, jako je například maturita. To
+      ale našeho pana profesora zastavilo a dal nám tento úkol, vytvořit si
+      vlastní novinářský web. I přes velké obavy se celý štáb pustil do tohoto
+      úkolu vší silou Jsme zaměřeni na sport, protože si myslíme, že je v
+      lidském životě velice důležitý a všichni by se mu měli aspoň trochu
+      věnovat, ať už jde o vlastní pohyb, nebo sledování oblíbených sportovních
+      týmů. Proto jsme tady my, abychom vám doručili to všechno důležité a
+      potřebné ohledně aktuálního dění ve sportu, ať k němu mají všichni trochu
+      blíž. Myslíme, že i malé kroky vedou k velkým věcem a proto doufáme že náš
+      web ve vás vzbudí nějakou novou myšlenku. Příjemné čtení vám přeje Martin
+      Klapuš, Šéfredaktor
+    </p>
+    <div class="galerie">
+      <div class="profilovka">
+        <img
+          src="Obrazky_profilovky/testobr1.jpg"
+          alt="fotka šéfredaktora Martina Klapuše"
+        />
+        <p class="popis_obrazku">Šéfredaktor Martin Klapuš</p>
+      </div>
+      <div class="profilovka">
+        <img
+          src="Obrazky_profilovky/testobr2.jpg"
+          alt="fotka webmastera Filipa Marka"
+        />
+        <p class="popis_obrazku">Webmaster Filip Marek</p>
+      </div>
+      <div class="profilovka">
+        <img src="Obrazky_profilovky/testobr3.jpeg" alt="fotka Ely" />
+        <p class="popis_obrazku">Ela</p>
+      </div>
+      <div class="profilovka">
+        <img src="Obrazky_profilovky/testobr4.jpeg" alt="fotka Gity" />
+        <p class="popis_obrazku">Gita</p>
+      </div>
+      <div class="profilovka">
+        <img src="Obrazky_profilovky/testobr5.jpeg" alt="fotka Anet" />
+        <p class="popis_obrazku">Anet</p>
+      </div>
+      <div class="profilovka">
+        <img src="Obrazky_profilovky/testobr6.jpeg" alt="fotka Vojty" />
+        <p class="popis_obrazku">Vojta</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

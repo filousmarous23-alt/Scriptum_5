@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <style>
+      h3 {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: 5%;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Scriptum-Clanky - Reprezentace před MS: Pastrňákův start je v ohrožení, do
+      týmu míří mladý talent Sikora
+    </title>
+  </head>
+  <body>
+    <h2>
+      <u
+        >Reprezentace před MS: Pastrňákův start je v ohrožení, do týmu míří
+        mladý talent Sikora</u
+      >
+    </h2>
+    <div class="menu-sekce">
+      <a href="../Clanky.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsala: Anet Jelínková</p>
+    <p class="autor">Datum: 5.5.2026</p>
+    <h3>
+      Každý český hokejový fanoušek prožívá týdny plné napětí. S blížícím se
+      mistrovstvím světa ve Švýcarsku (2026) se začíná krystalizovat podoba
+      národního týmu pod vedením Radima Rulíka. Zatímco z kabiny Bostonu
+      přicházejí spíše skeptické zprávy ohledně startu Davida Pastrňáka,
+      trenérský štáb musí reagovat na další ztráty a povolává dravé mládí.
+    </h3>
+    <p class="zprava">
+      Největší otazník visí nad účastí bostonského dua David Pastrňák a Pavel
+      Zacha. Pastrňák, který v základní části NHL opět překonal stobodovou
+      hranici, se potýká s následky praskliny v třísle, která ho trápí už od
+      listopadu. K jeho váhání přispívají i čerstvé rodinné povinnosti.
+      Generální manažer Jiří Šlégr situaci hodnotí jako neutrální, ale sám hráč
+      naznačil, že k jeho příjezdu by se ,,některé věci musely drasticky
+      změnit”. Podobně je na tom Pavel Zacha, který dohrával play-off s výronem
+      kotníku. Trenér Radim Rulík se bude muset obejít i bez několika klíčových
+      opor ze zámoří. Zdravotní stav nepustí na šampionát Ondřeje Paláta, který
+      i přes velkou snahu reprezentovat, dostal stopku od svého zdravotního
+      stavu po náročné sezoně v New Jersey. Také Radim Faksa, silový útočník, se
+      potýká s následky zranění, která mu neumožňují nastoupit v plné síle. A i
+      Tomáš Nosek, další defenzivní specialista z NHL, se musel omluvit kvůli
+      nedoléčeným šrámům, které vyžadují delší rekonvalescenci. Kromě omluvenek
+      z NHL musí realizační tým řešit i aktuální ztráty probíhající v přípravě.
+      Kvůli zranění z nominace vypadl útočník Michael Špaček ze Sparty. Šance se
+      tak chopí mládí - místo něj byl povolán Petr Sikora z Třince. Kapitán
+      úspěšné reprezentační dvacítky se k týmu připojí v Českých Budějovicích a
+      pokusí se vybojovat si místo v konečné nominaci. Další změnou je příchod
+      Kristiana Reichela, který nahrazuje Jaroslava Chmelaře. Ten po drobném
+      zranění ze zápasu se Švýcarskem dostal týden na doléčení a o jeho dalším
+      osudu v týmu se rozhodne později. Jasným lídrem týmu zůstává Roman
+      Červenka. Čerstvý ,,Hokejista sezony” potvrdil svou účast a je připraven
+      vést národní tým na jeho poslední akci pod současným trenérským štábem.
+      ,,Pokud jsem zdravý, nedovedu si představit, že bych řekl ne,” uvedl
+      kapitán, pro kterého bude turnaj ve Švýcarsku vrcholem sezony.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_Clanky/pastrnak_2.webp"
+        alt="obrázek Davida Pastrňáka"
+      />
+    </div>
+    <p>Zdroje: Oficiální Instagram @ceskyhokej, Livesport</p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

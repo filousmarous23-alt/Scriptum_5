@@ -1,0 +1,30 @@
+.profilovka {
+  width: 30%;
+  min-width: 250px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.profilovka img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  transform: 0.3s ease;
+  cursor: pointer;
+}
+.profilovka img:hover {
+  scale: 1.1;
+}
+.galerie {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 200px;
+}
+.popis_obrazku {
+  font-size: large;
+}

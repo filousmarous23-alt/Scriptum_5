@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <style>
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        display: block;
+        text-align: center;
+        margin-top: 0%;
+        transform: scale(0.7);
+      }
+
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scriptum-aktuální zprava - Změny regulí v F1</title>
+  </head>
+  <body>
+    <h2>
+      <u> Změny ve formuli 1: FIA upravila regule pro vozy 2026 </u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../aktualni_zpravy.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsal: Vojtěch Krupa</p>
+    <p class="autor">Datum: 22.4.2026</p>
+    <p class="zprava">
+      Vedení FIA oznámilo úpravy technických regulí pro sezónu 2026. Tyto změny
+      přicházejí po prvních třech velkých cenách a hlavně reagují na velkou
+      kritiku od stájí a jezdců na současné regule. Hlavní úpravy se týkají
+      především hybridních pohonných jednotek. Dojde ke snížení míry rekuperace
+      energie, aby vozy nebyly příliš omezené v maximálním výkonu na rovinkách.
+      Zároveň se upraví využití elektrického boostu, což má zabránit výrazným
+      rozdílům v rychlosti mezi vozy. Blížící se Velká Cena Miami se již pojede
+      s novými pravidly. Po této změně FIA doufá, že budou jezdci a stáje
+      spokojeni. V případě dalších problémů je připravena pravidla znovu
+      upravit.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_zpravy/F1_2.jpg"
+        alt="obrázek Jakuba Kose"
+      />
+    </div>
+    <p>Zdroj: Oficiální Stránky FIA, Oficiální Stránky Formule 1</p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <style>
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: -8%;
+        transform: scale(0.5);
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scriptum-aktuální zprava - Výhra Šelm</title>
+  </head>
+  <body>
+    <h2>
+      <u> Historický výkon v Londýně změnil dějiny </u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../aktualni_zpravy.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+
+    <p class="autor">Napsala: Gita Hadašová</p>
+    <p class="autor">Datum: 2.5.2026</p>
+    <p class="zprava">
+      Výhercem londýnského maratonu 2026 se stal keňský běžec Sabastian Sawe s
+      cílovým časem 1:59:30. Pokořením hranice dvou hodin na neuvěřitelných
+      42,195 km v oficiálním závodě se postaral o jeden z největších momentů
+      moderní atletiky. Závod se konal 26.4. 2026 a přinesl mimořádnou rychlost.
+      Pod dosavadní rekord se totiž dostali hned tři běžci. Druhý skončil
+      Etiopan Yomif Kejelcha s časem 1:59:41 a o pouhých 47 sekund za ním,
+      doběhl na třetím místě Jacob Kiplimo z Ugandy. Sawe tak nejen obhájil své
+      vítězství z minulého roku, ale zároveň svým výkonem posunul hranice
+      lidských možností. O více než minutu překonal dosavadní světový rekord,
+      čímž ukázal, že maraton pod dvě hodiny je možný i v regulérních závodních
+      podmínkách. Jeho výkon tak může odstartovat novou éru vytrvalostního běhu.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_zpravy/marahon_2.avif"
+        alt="obrázek-marathon"
+      />
+    </div>
+    <p></p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

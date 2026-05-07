@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <style>
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: 5%;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scriptum-Komentare - Jsou sportovci placeni příliš mnoho?</title>
+  </head>
+  <body>
+    <h2>
+      <u>Jsou sportovci placeni příliš mnoho?</u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../Komentare.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsal: Vojtěch Krupa</p>
+    <p class="autor">Datum: 5.5.2026</p>
+    <p class="zprava">
+      V dnešní době se často řeší, kolik vydělávají profesionální sportovci.
+      Fotbalisté, basketbalisté nebo tenisté mají platy v milionech a spousta
+      lidí si myslí, že je to až moc. Já si ale myslím, že to není úplně tak
+      jednoduché. Na jednu stranu to opravdu působí nespravedlivě. Sportovec
+      může vydělat za týden víc než jiný člověk za celý život, třeba učitel nebo
+      zdravotní sestra. Když se na to člověk podívá jen takhle, je jasné, proč
+      to lidem vadí. Na druhou stranu je ale sport obrovský byznys. Kluby
+      vydělávají peníze na vstupenkách, reklamách a hlavně televizních právech.
+      A sportovci jsou hlavní důvod, proč na to lidi vůbec koukají. Bez nich by
+      ty peníze prostě nebyly. Navíc je důležité si uvědomit, že do vrcholového
+      sportu se dostane jen malé procento lidí. Ti nejlepší trénují celý život,
+      mají obrovskou disciplínu a často obětují normální život. A kariéra
+      sportovce taky netrvá dlouho — zranění ji může klidně rychle ukončit.
+      Podle mě teda sportovci nejsou „placeni moc“, spíš je problém v tom, jak
+      jsou nastavené platy v jiných profesích. Sport je prostě svět sám pro
+      sebe.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_Komentare/penize_fotbal.jpg"
+        alt="obrázek-volejbal"
+      />
+    </div>
+    <p></p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

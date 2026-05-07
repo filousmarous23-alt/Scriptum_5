@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <style>
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: 5%;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Scriptum-fejetony - >Gaučoví generálové a jejich nezbvytná důležitost pro
+      fotbal
+    </title>
+  </head>
+  <body>
+    <h2>
+      <u>Gaučoví generálové a jejich nezbvytná důležitost pro fotbal</u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../Fejetony.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsal: Filip Marek</p>
+    <p class="autor">Datum: 3.5.2026</p>
+    <p class="zprava">
+      V neděli odpoledne se v českých domácnostech odehrává fascinující proměna.
+      Z průměrného úředníka, který má problém trefit se klíčem do zámku, se
+      stává strategický génius, kterému by záviděl i Pep Guardiola. Stačí k tomu
+      málo: gauč, miska slaných tyčinek a pocit, že přes obrazovku s úhlopříčkou
+      metr a půl vidím do duše každého útočníka na hřišti. Být gaučovým expertem
+      je nesmírně náročné povolání. Musíte totiž udržet neochvějnou jistotu, že
+      ten kluk, co právě ve sprintu v 85. minutě minul bránu, je „naprostý
+      nemehlo, které tam nemá co dělat“. Vy byste to samozřejmě dali. Vaše
+      břicho sice možná mírně přerůstá gumu u tepláků, ale vaše taktická vize je
+      štíhlá a ostrá jako břitva. Nejkrásnější na gaučovém expertství je ta
+      absolutní absence odpovědnosti. Když národní tým prohraje, může za to
+      trenér, špatná tráva nebo vlhkost vzduchu. Když vyhraje, je to proto, že
+      hráči konečně udělali to, co jste na tu televizi celých devadesát minut
+      řvali. Jsme národ deseti milionů trenérů, kteří přesně vědí, že se mělo
+      střídat dřív, hrát víc do křídel a že ten gólman je dneska nějaký
+      „vylepený“. Možná je to naše národní terapie. Normálně nás nikdo
+      neposlouchá, ale na gauči v obýváku? Tam jsme generálové. Tam rozhodujeme
+      o osudech klubů. A že se nám při tom nadávání občas drolí chipsy do klína?
+      To je jen malá oběť na oltář vrcholového sportu.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_fejetony/gaucovy_povalec.jpeg"
+        alt="obrázek-volejbal"
+      />
+    </div>
+    <p></p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

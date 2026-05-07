@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="aktualni_zpravy.css" />
+    <title>Scriptum-Reportaze</title>
+  </head>
+  <style>
+    .popis_fotky_zpravy {
+      color: black;
+      font-size: large;
+    }
+    #menuTlacitko {
+      margin-top: 10px;
+      background-color: burlywood;
+      border: none;
+      padding: 10px 20px;
+      font-size: larger;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transform: 0.3s ease;
+    }
+    #menuTlacitko:hover {
+      scale: 1.1;
+    }
+    .skryto {
+      display: none;
+    }
+    .zobrazeno {
+      display: block;
+    }
+    #menuObsah.zobrazeno {
+      display: block;
+      position: absolute;
+      background-color: burlywood;
+      padding: 15px;
+      border-radius: 5px;
+      z-index: 100;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    #menuObsah p {
+      margin-left: -5px;
+      margin: 0;
+      background-color: none;
+      padding: 5px 0;
+      font-size: 30px;
+    }
+    #menuObsah a {
+      text-decoration: none;
+      color: black;
+    }
+    .domovní_stránka:hover {
+      scale: 1.1;
+    }
+    p.fejetony:hover {
+      scale: 1.1;
+    }
+    p.rozhovory:hover {
+      scale: 1.1;
+    }
+  </style>
+  <body>
+    <div class="menu-sekce">
+      <button id="menuTlacitko">☰</button>
+      <div id="menuObsah" class="skryto">
+        <p class="domovní_stránka">
+          <a href="index.html">Domovní stránka</a>
+        </p>
+        <p class="fejetony">
+          <a href="aktualni_zpravy.html">Aktuální zprávy</a>
+        </p>
+        <p class="fejetony">
+          <a href="Rozhovory.html">Rozhovory</a>
+        </p>
+        <p class="fejetony">
+          <a href="Fejetony.html">Fejetony</a>
+        </p>
+        <p class="fejetony">
+          <a href="Clanky.html">Články</a>
+        </p>
+        <p class="fejetony">
+          <a href="Komentare.html">Komentáře</a>
+        </p>
+      </div>
+    </div>
+    <div class="galerie_rozhovory">
+      <div class="rozhovory_fotky">
+        <a href="Reportaze/reportaz_1.html">
+          <img
+            src="obrazky_reportaze/pardubice_1.jpg"
+            alt="Kometa vs Pardubice"
+          />
+          <p class="popis_fotky_zpravy">
+            <u>Modrobílá pouť do Pardubic</u>
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

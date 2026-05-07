@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <style>
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: 5%;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Scriptum-Clanky - Bitva o titul až do konce: Zvítězí konečně Arsenal?
+    </title>
+  </head>
+  <body>
+    <h2>
+      <u>Bitva o titul až do konce: Zvítězí konečně Arsenal?</u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../Clanky.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsal: Vojtěch Krupa</p>
+    <p class="autor">Datum: 5.5.2026</p>
+    <p class="zprava">
+      Sezóna Premier League 2025/26 patří mezi nejnapínavější za poslední roky.
+      O titul bojují především Arsenal a Manchester City, kteří si po většinu
+      sezony drží skvělou formu a pravidelně získávají důležité body. Boj o
+      první místo je velmi vyrovnaný a o vítězi může rozhodnout až poslední
+      kolo. Arsenal letos předvádí velmi kvalitní výkony. Pod vedením trenéra
+      Mikela Artety hraje organizovaně, sebevědomě a dokáže zvládat i těžké
+      zápasy. Oproti minulým sezonám působí tým zkušeněji a psychicky odolněji,
+      což může být v boji o titul klíčové. Manchester City je i nadále jedním z
+      nejsilnějších týmů v Evropě. Tým Pepa Guardioly má velké zkušenosti s
+      bojem o trofeje a jeho hráči jsou zvyklí na tlak důležitých zápasů. I
+      přesto ale letos několikrát ztratil body, čehož Arsenal dokázal využít.
+      Tato sezóna ukazuje, jak náročná a vyrovnaná Premier League je. Každá
+      chyba může rozhodnout o konečném pořadí a každý zápas má obrovský význam.
+      Právě proto je anglická liga považována za jednu z nejlepších soutěží na
+      světě. Podle mého názoru má Arsenal letos velkou šanci titul získat,
+      protože působí velmi dobře po herní i psychické stránce. Manchester City
+      však stále zůstává nebezpečným soupeřem, a proto bude boj o titul napínavý
+      až do konce sezony. Závěrem lze říct, že bitva o titul v Premier League
+      2025/26 je jedním z nejzajímavějších sportovních příběhů této sezóny a
+      ukazuje, proč fotbal patří mezi nejoblíbenější sporty na světě.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_Clanky/Arsenal_2.avif"
+        alt="obrázek týmu Arsenal"
+      />
+    </div>
+    <p>Zdroje: Oficiální stránky Premier league, iDnes.cz</p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

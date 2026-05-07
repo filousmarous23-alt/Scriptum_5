@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <style>
+      h3 {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+      }
+      p.zprava {
+        font-size: larger;
+        text-align: justify;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+
+      .obrazek_konec {
+        text-align: center;
+        margin-top: 5%;
+      }
+      #menuTlacitko {
+        background-color: burlywood;
+        border: none;
+        padding: 10px 20px;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transform: 0.3s ease;
+      }
+      #menuTlacitko:hover {
+        scale: 1.1;
+      }
+      .skryto {
+        display: none;
+      }
+      .zobrazeno {
+        display: block;
+      }
+      #menuObsah.zobrazeno {
+        display: block;
+        position: absolute;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 100;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #menuObsah p {
+        margin-left: -5px;
+        margin: 0;
+        background-color: none;
+        padding: 5px 0;
+        font-size: 30px;
+      }
+      #menuObsah a {
+        text-decoration: none;
+        color: black;
+      }
+      .autor {
+        margin-left: 5%;
+        font-weight: bold;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Scriptum-Clanky - Reprezentace před MS: Pastrňákův start je v ohrožení, do
+      týmu míří mladý talent Sikora
+    </title>
+  </head>
+  <body>
+    <h2>
+      <u>Švýcarský tenista Wawrinka na domácím turnaji ukončí kariéru</u>
+    </h2>
+    <div class="menu-sekce">
+      <a href="../Clanky.html"
+        ><button id="menuTlacitko">⬅</button>
+      </a>
+      <div id="menuObsah" class="skryto"></div>
+    </div>
+    <p class="autor">Napsala: Gita Hadašová</p>
+    <p class="autor">Datum: 6.5.2026</p>
+    <h3>
+      Švýcarský tenisový svět se připravuje na emotivní okamžik. Jeden z
+      nejvýraznějších hráčů poslední dekády, Stan Wawrinka, oznámil, že jeho
+      cesta profesionálním okruhem skončí tam, kde se cítí nejlépe - před
+      domácím publikem.
+    </h3>
+    <p class="zprava">
+      Tato emotivní událost se stane ústředním bodem turnaje Swiss Indoors Basel
+      2026, který spadá do kategorie ATP 500 a odehraje se na přelomu října a
+      listopadu. Pořadatelé neskrývají nadšení a potvrzují, že start domácího
+      veterána bude pro fanoušky největším lákadlem celého sportovního týdne.
+      Organizátoři na sociálních sítích vzdali Wawrinkovi hold připomínkou jeho
+      tří grandslamových titulů a neopakovatelného jednoručního bekhendu, který
+      ho provázel celých 24 let v profesionální dráze. Zdůraznili, že Stan
+      odevzdal tenisu maximum a Basilej, která stála na počátku jeho cesty, je
+      logickým místem pro její uzavření. Hlavní oslava Wawrinkova odkazu
+      proběhne v rámci pondělního programu „Super Monday“ 26. října v 18:00.
+      Půjde o velkolepý ceremoniál, který skrze video medailonky a pocty
+      připomene nejdůležitější okamžiky a nejcennější trofeje, které během let
+      na okruhu ATP nasbíral. Fanoušci se však nemusí bát, že by šlo o pouhé
+      formální sbohem u mikrofonu. Wawrinka má v plánu do turnaje aktivně
+      zapojit i jako hráč, takže diváci budou mít minimálně ještě jednu
+      příležitost vidět ho v akci Letošní ročník v hale St. Jakobshalle tak
+      získá díky loučení domácí hvězdy zcela jiný rozměr. Turnaj navíc v roce
+      2026 slaví půlkulaté 55. výročí svého založení, což z něj dělá jednu z
+      nejvýznamnějších událostí ve švýcarských sportovních událostích. Při
+      pohledu zpět na Stanovu kariéru vyčnívá především jeho schopnost vyhrávat
+      velké turnaje v nejsilnější éře tenisu. Bývalý třetí hráč světa si
+      podmanil tři různé grandslamy (Melbourne 2014, Paříž 2015 a New York 2016)
+      a celkem nastřádal 16 turnajových prvenství. Zapomenout nelze ani na jeho
+      reprezentační úspěchy - olympijské zlato po boku Rogera Federera z Pekingu
+      a klíčový podíl na zisku Davis Cupu v roce 2014.
+    </p>
+    <div class="obrazek_konec">
+      <img
+        src="../obrazky_Clanky/wawrinka_2.jpg"
+        alt="obrázek Stana Wawrinky"
+      />
+    </div>
+    <p></p>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>

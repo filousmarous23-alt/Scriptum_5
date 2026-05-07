@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="cz">
+  <head>
+    <link rel="stylesheet" href="aktualni_zpravy.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scriptum-aktuální zprávy</title>
+    <style>
+      .popis_fotky_zpravy {
+        color: black;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-sekce">
+      <button id="menuTlacitko">☰</button>
+      <div id="menuObsah" class="skryto">
+        <p class="domovní_stránka">
+          <a href="index.html">Domovní stránka</a>
+        </p>
+        <p class="fejetony">
+          <a href="Rozhovory.html">Rozhovory</a>
+        </p>
+        <p class="fejetony">
+          <a href="Fejetony.html">Fejetony</a>
+        </p>
+        <p class="fejetony">
+          <a href="Clanky.html">Články</a>
+        </p>
+        <p class="fejetony">
+          <a href="Reportaze.html">Reportáže</a>
+        </p>
+        <p class="fejetony">
+          <a href="Komentare.html">Komentáře</a>
+        </p>
+      </div>
+    </div>
+    <div class="galerie_rozhovory">
+      <div class="rozhovory_fotky">
+        <a href="aktualni_zpravy/zprava_1.html">
+          <img src="obrazky_zpravy/arbeloa.jpg" alt="Fotka Alvara Arbeloy" />
+          <p class="popis_fotky_zpravy">
+            <u>
+              Álvaro Arbeloa po sezoně končí jako trenér Realu Madrid, tvrdí
+              španělská média.</u
+            >
+          </p>
+        </a>
+        <a href="aktualni_zpravy/zprava_2.html">
+          <img src="obrazky_zpravy/Jakub_kos.jpg" alt="Obrázek Jakuba Kose" />
+          <p class="popis_fotky_zpravy">
+            <u>
+              Pohyby v brněnské sestavě: Kometa potvrdila odchody a kádr projde
+              obměnou</u
+            >
+          </p>
+        </a>
+        <a href="aktualni_zpravy/zprava_3.html">
+          <img src="obrazky_zpravy/F1_1.jpg" alt="Obrázek F1" />
+          <p class="popis_fotky_zpravy">
+            <u> Změny ve formuli 1: FIA upravila regulace pro vozy 2026 </u>
+          </p>
+        </a>
+        <a href="aktualni_zpravy/zprava_4.html">
+          <img
+            src="obrazky_zpravy/selmy_1.png"
+            alt="Obrázek selmy - Volejbal"
+          />
+          <p class="popis_fotky_zpravy">
+            <u> Obrat po nezdarech: Šelmy Brno slaví důležitou výhru </u>
+          </p>
+        </a>
+        <a href="aktualni_zpravy/zprava_5.html">
+          <img src="obrazky_zpravy/marahon_1.jpg" alt="Obrázek-Marathon" />
+          <p class="popis_fotky_zpravy">
+            <u> Historický výkon v Londýně změnil dějiny </u>
+          </p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const tlacitko = document.getElementById("menuTlacitko");
+  const obsah = document.getElementById("menuObsah");
+  tlacitko.addEventListener("click", function () {
+    if (obsah.classList.contains("skryto")) {
+      obsah.classList.remove("skryto");
+      obsah.classList.add("zobrazeno");
+    } else {
+      obsah.classList.remove("zobrazeno");
+      obsah.classList.add("skryto");
+    }
+  });
+</script>
