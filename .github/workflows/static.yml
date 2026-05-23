@@ -24,8 +24,7 @@ jobs:
         run: |
           # Just ensure all files are collected from repo root
           mkdir -p artifact
-          cp -r ./* artifact/
-
+          cp -r --exclude=artifact ./* artifact/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
